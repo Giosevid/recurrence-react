@@ -1,0 +1,25 @@
+@import '../../assets/sass/';
+
+.container {
+  text-align: center;
+  padding: 16px;
+  color: $white;
+
+  input {
+    color: $white;
+  }
+
+  button {
+    padding: 13.5px;
+    min-width: 100%;
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border-color: $white;
+  }
+
+  .MuiButton-outlinedPrimary {
+    color: $white;
+    border-color: $white;
+  }
+}

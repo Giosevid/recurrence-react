@@ -1,0 +1,15 @@
+@import '../../assets/sass/';
+
+.wrapperList {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  color: $white;
+  margin-left: 16px;
+}
+
+svg {
+  color: $white;
+}

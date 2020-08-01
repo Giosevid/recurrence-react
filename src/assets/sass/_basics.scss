@@ -1,4 +1,6 @@
+@import './colors';
+
 body {
-  padding: 16px;
-  background-color: red;
+  margin: 0;
+  background-color: $base-color;
 }

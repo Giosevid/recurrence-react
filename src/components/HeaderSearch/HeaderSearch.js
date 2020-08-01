@@ -2,6 +2,7 @@ import React from 'react';
 import {useFormik} from 'formik';
 import {TextField, Button} from '@material-ui/core';
 import {validateInputFild} from '../../utils/validations';
+import Grid from '@material-ui/core/Grid';
 import './HeaderSearch.scss';
 
 export default function HeaderSearch({setUrl}) {
@@ -18,9 +19,27 @@ export default function HeaderSearch({setUrl}) {
   return (
     <>
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        <TextField value={values.inputUrl} name="urlInput" onChange={handleChange} id="outlined-basic" label="Outlined" variant="outlined" />
-        <Button type="submit" variant="outlined" size="large">Default</Button>
-        {errors.urlInput &&  <div>{errors.urlInput}</div>}
+        <div div className="container">
+          <h1>Arbol de directorios</h1>
+          <Grid container direction="row" justify="space-around" alignItems="center" spacing={3}>
+            <Grid item xs={12} sm={9}>
+              <TextField
+                error={errors.urlInput}
+                value={values.inputUrl}
+                name="urlInput"
+                fullWidth
+                onChange={handleChange}
+                id="outlined-basic"
+                variant="outlined"
+                label={errors.urlInput}
+                defaultValue="Introducir Url"
+              />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <Button color="primary" type="submit" variant="outlined">Default</Button>
+            </Grid>
+          </Grid>
+        </div>
       </form>
     </>
   )
