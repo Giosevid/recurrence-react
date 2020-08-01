@@ -4,18 +4,16 @@ import {TextField, Button} from '@material-ui/core';
 import {validateInputFild} from '../../utils/validations';
 import './HeaderSearch.scss';
 
-export default function HeaderSearch() {
+export default function HeaderSearch({setUrl}) {
   const {handleChange, values, handleSubmit, errors} = useFormik({
     initialValues: {
       urlInput: ''
     },
     onSubmit: ({ urlInput }) => {
-      console.log(urlInput)
+      setUrl(urlInput)
     },
     validate: validateInputFild
   });
-
-  console.log(errors)
 
   return (
     <>

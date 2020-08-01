@@ -3,14 +3,11 @@ function validateUrl(value) {
 }
 
 export const validateInputFild = ({ urlInput }) => {
-  console.log(urlInput)
   let errors = {};
   if(!urlInput) {
     errors.urlInput = 'Campo Requerido';
   } else if(!validateUrl(urlInput)) {
     errors.urlInput = 'Formato de url incorrecto';
-  }else {
-    errors.urlInput = '';
   }
 
   return errors;
